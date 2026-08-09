@@ -1,0 +1,5 @@
+{
+  "name": "Copy of SmartVsion V2",
+  "description": "A futuristic dual-lens video player that simulates smart glasses. Supports independent playlists per lens and AI-powered scene analysis using Gemini 2.5.",
+  "requestFramePermissions": []
+}

@@ -10,12 +10,27 @@ const useDemoMode = !apiKey;
 
 const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
+const demoResponses = [
+  "Object detected: Person with backpack. Activity: Standing still. Threat level: Low.",
+  "Scene note: Urban environment with parked vehicle and pedestrian. Weather: Clear.",
+  "Detected: Shelf of electronics. Focus area: Center-right. Status: Stable.",
+  "Alert: Bright light source ahead. Recommend glare reduction for optimal vision.",
+  "Observation: Doorway and corridor visible. Movement: Minimal. Environment: Indoor.",
+  "Detected: Road signage and crosswalk. Suggest caution for nearby pedestrians.",
+  "Analysis: Forested area with foliage. Color profile: Green-dominant. No immediate hazards.",
+];
+
+const getDemoAnalysis = (): string => {
+  const index = Math.floor(Math.random() * demoResponses.length);
+  return demoResponses[index];
+};
+
 /**
  * Analyzes a base64 image frame using Gemini, or returns a demo message when no API key is configured.
  */
 export const analyzeFrame = async (base64Image: string): Promise<string> => {
   if (useDemoMode) {
-    return "Demo mode active: visual analysis is simulated. Upload a frame or use the local preview to see the interface respond.";
+    return getDemoAnalysis();
   }
 
   try {

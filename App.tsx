@@ -105,7 +105,7 @@ const App: React.FC = () => {
              {analysis && (
                <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/20 border border-blue-800 text-xs text-blue-200 animate-in fade-in slide-in-from-top-2 duration-500">
                   <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                  AI Analysis Active
+                  {import.meta.env.VITE_GEMINI_API_KEY || import.meta.env.GEMINI_API_KEY ? 'AI Analysis Active' : 'Demo Mode Active'}
                </div>
              )}
              <button className="p-2 hover:bg-gray-800 rounded-full transition text-gray-400 hover:text-white">

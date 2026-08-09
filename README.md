@@ -1,20 +1,31 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SmartVision v2
 
-# Run and deploy your AI Studio app
+A Vite + React application that uses the Gemini API to power the SmartVision experience.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/drive/1FWqfPR-fSEX60UyHSpBUwNT9vQK4iPnj
+### Prerequisites
+- Node.js 18+
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
+### Steps
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Create a local environment file named `.env.local` and set your Gemini API key:
+   `GEMINI_API_KEY=your_api_key_here`
+3. Start the app:
    `npm run dev`
+
+The app will be available at `http://localhost:3000/`.
+
+## Deploy to GitHub Pages
+
+This project is configured to deploy automatically to GitHub Pages through GitHub Actions.
+
+### What was added
+- GitHub Actions workflow for automatic build and deploy
+- Production base path configuration for the repository name
+
+## Project structure
+- `src/` and app entry files for the React UI
+- `services/` for API integration
+- `components/` for reusable UI components

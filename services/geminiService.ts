@@ -1,6 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey =
+  (import.meta.env.VITE_GEMINI_API_KEY as string | undefined) ||
+  (import.meta.env.GEMINI_API_KEY as string | undefined) ||
+  (process.env.GEMINI_API_KEY as string | undefined) ||
+  (process.env.API_KEY as string | undefined);
+
+const ai = new GoogleGenAI({ apiKey });
 
 /**
  * Analyzes a base64 image frame using Gemini.

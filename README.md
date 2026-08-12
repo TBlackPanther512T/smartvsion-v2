@@ -1,6 +1,6 @@
 # SmartVision v2
 
-A Vite + React application that uses the Gemini API to power the SmartVision experience.
+A Vite + React application for dual-lens media playback and visual controls.
 
 ## Run locally
 
@@ -10,9 +10,7 @@ A Vite + React application that uses the Gemini API to power the SmartVision exp
 ### Steps
 1. Install dependencies:
    `npm install`
-2. Create a local environment file named `.env.local` and set your Gemini API key:
-   `GEMINI_API_KEY=your_api_key_here`
-3. Start the app:
+2. Start the app:
    `npm run dev`
 
 The app will be available at `http://localhost:3000/`.
